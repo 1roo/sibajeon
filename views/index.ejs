@@ -3,9 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>sibajeon</title>
+    <link rel="stylesheet" href="/static/css/main.css" />
   </head>
   <body>
-    <h1>hello world</h1>
+    <div class="container">
+      <div class="logo-box">
+        <img src="/static/images/sibajeon.png" alt="sibajeon" />
+        <img src="/static/images/logo.png" alt="logo" />
+      </div>
+      <p class="login">LOGIN</p>
+      <form action="/login">
+        <div class="inputs">
+          <input type="email" placeholder="이메일" />
+          <input type="password" placeholder="비밀번호" />
+        </div>
+        <button type="button">로그인</button>
+      </form>
+
+      <div class="social-logins">
+        <a href="#"
+          ><img src="/static/images/google_logo.png" alt="google_logo"
+        /></a>
+        <a href="#"
+          ><img src="/static/images/naver_logo.png" alt="naver_logo"
+        /></a>
+        <a href="#"
+          ><img src="/static/images/kakaotalk_logo.png" alt="kakaotalk_logo"
+        /></a>
+      </div>
+
+      <div class="signup-spans">
+        <span>아직 계정이 없으신가요?</span>
+        <a href="/signup" class="signup">회원가입</a>
+      </div>
+    </div>
   </body>
 </html>
