@@ -17,30 +17,17 @@
   cursor: default;
 }
 
-form {
+.login-form {
   display: flex;
   margin: 0 auto;
   width: 220px;
 }
 
-input {
-  height: 23px;
-  padding-left: 8px;
-  border-radius: 5px;
-  border: 1px solid #d9d9d9;
-}
-
-input::placeholder {
-  color: #d9d9d9;
-  font-weight: normal;
-  font-size: smaller;
-}
-
-input:first-child {
+.login-form input:first-child {
   margin-bottom: 4px;
 }
 
-button {
+.login-form button {
   background-color: #1b8eec;
   border: none;
   border-radius: 5px;
@@ -88,4 +75,154 @@ button {
   color: #00478c;
   font-weight: bold;
   margin-left: 5px;
+}
+
+p {
+  color: #9b9b9b;
+  text-align: center;
+  font-size: 18px;
+  margin: 30px 0 50px;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 15px;
+  font-size: 15px;
+}
+
+.signup-form .email-label {
+  display: flex;
+  width: 300px;
+}
+
+.signup-form span {
+  font-size: 10px;
+}
+
+.email1 {
+  width: 80px;
+  margin: 0 3px 0 5px;
+}
+
+.custom-select {
+  position: relative;
+  width: 120px;
+}
+
+.custom-select select {
+  width: 112px;
+  height: 27px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: white;
+  border-radius: 5px;
+  border: 1px solid #d9d9d9;
+  padding: 0 3px 1px 8px;
+  font-size: 16px;
+  margin-left: 3px;
+}
+
+.custom-select::after {
+  content: "▼";
+  position: absolute;
+  top: 13px;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 14px;
+}
+
+.no-arrow::after {
+  content: "";
+  display: none;
+}
+
+#customEmail {
+  width: 100px;
+  margin-left: 3px;
+}
+
+.dup-btn {
+  background: white;
+  border-radius: 5px;
+  border: 1px solid #d9d9d9;
+  margin-top: 10px;
+  cursor: pointer;
+  height: 27px;
+}
+
+.dup-span {
+  color: #1b8eec;
+  margin-bottom: 15px;
+}
+
+.pw,
+.pwConfirm {
+  display: flex;
+  justify-content: flex-end;
+  margin: 3px 0;
+}
+
+.pw input,
+.pwConfirm input {
+  width: 150px;
+}
+
+.pw-span,
+.auth-span {
+  font-weight: bold;
+  color: red;
+  display: block;
+  text-align: end;
+  margin-top: -3px;
+  margin-bottom: 20px;
+}
+
+.phone-div {
+  display: flex;
+}
+
+.phone-div input:first-child {
+  width: 40px;
+}
+
+.phone-div input {
+  width: 60px;
+}
+
+.auth {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 3px;
+}
+
+.auth-btn {
+  background: white;
+  border-radius: 5px;
+  border: 1px solid #d9d9d9;
+  margin-top: 10px;
+  cursor: pointer;
+  height: 27px;
+  width: 100px;
+}
+
+.auth-num {
+  width: 150px;
+}
+
+.submit-btn {
+  background-color: #1b8eec;
+  border: none;
+  border-radius: 5px;
+  height: 50px;
+  width: 150px;
+  padding: 0 10px;
+  font-size: 18px;
+  line-height: 1;
+  color: white;
+  cursor: pointer;
+  margin: 50px auto;
 }

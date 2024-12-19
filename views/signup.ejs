@@ -8,12 +8,92 @@
   </head>
   <body>
     <div class="container">
-        <header>
-            <img class="right-arrow" src="/static/images/right-arrow.png" alt="right-arrow">
-            <img class="header-logo" onclick="location.href='/'" src="/static/images/logo.png" alt="logo">
-        </header>
-        <p>시바전의 회원이 되어주세요!</p>
-      </div>
-    </body>
+      <header>
+        <img
+          class="right-arrow"
+          src="/static/images/right-arrow.png"
+          alt="right-arrow"
+        />
+        <img
+          class="header-logo"
+          onclick="location.href='/'"
+          src="/static/images/logo.png"
+          alt="logo"
+        />
+      </header>
+      <p>시바전의 회원이 되어주세요!</p>
+      <form name="signup" class="signup-form">
+        <label for="userEmail" class="email-label">
+          이메일
+          <input class="email1" name="userEmail" type="text" />
+          @
+          <div id="emailSelectContainer" class="custom-select">
+            <select
+              name="email2"
+              id="email2"
+              onchange="handleEmailSelect(this)"
+            >
+              <option value="gmail.com">gmail.com</option>
+              <option value="naver.com">naver.com</option>
+              <option value="daum.net">daum.net</option>
+              <option value="custom">직접 입력</option>
+            </select>
+          </div>
+          <input
+            name="customEmail"
+            type="text"
+            id="customEmail"
+            style="display: none"
+            placeholder="이메일 입력"
+          />
+        </label>
+        <button class="dup-btn" type="button">중복검사</button>
+        <span class="dup-span"><b>사용 가능</b>한 이메일입니다.</span>
+        <div class="pw">
+          <label for="userPw">
+            비밀번호
+            <input type="password" />
+          </label>
+        </div>
+        <div class="pwConfirm">
+          <label for="userPwConfirm">
+            비밀번호 확인
+            <input type="password" />
+          </label>
+        </div>
+        <span class="pw-span">비밀번호가 일치하지 않습니다.</span>
+        <div class="phone-div">
+          <label for="phoneNum">
+            휴대폰
+            <input name="phoneNum" id="num1" type="text" value="010" disabled />
+            -
+            <input name="phoneNum" id="num2" type="number" />
+            -
+            <input name="phoneNum" id="num3" type="text" />
+          </label>
+        </div>
+        <div class="auth">
+          <button class="auth-btn" type="button">인증번호 발송</button>
+          <input class="auth-num" type="number" placeholder="인증번호 6자리" />
+        </div>
+        <span class="auth-span">잘못된 인증번호입니다.</span>
+        <button class="submit-btn" onclick="signup()">가입완료</button>
+      </form>
+    </div>
+    <script>
+      function handleEmailSelect(select) {
+        const customEmailInput = document.getElementById("customEmail");
+        const emailSelect = document.getElementById("email2");
+        if (select.value === "custom") {
+          customEmailInput.style.display = "inline";
+          emailSelectContainer.style.display = "none";
+          customEmailInput.required = true;
+        } else {
+          customEmailInput.style.display = "none";
+          emailSelectContainer.style.display = "inline-block";
+          customEmailInput.required = false; //
+        }
+      }
+    </script>
   </body>
 </html>
