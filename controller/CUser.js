@@ -5,7 +5,7 @@ const bcrypt = require("bcrypt");
 const SALT = 10;
 
 /* '/' GET */
-exports.main = (req, res) => {
+exports.login = (req, res) => {
   res.render("index");
 };
 

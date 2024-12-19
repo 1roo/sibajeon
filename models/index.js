@@ -15,10 +15,13 @@ let sequelize = new Sequelize(
 );
 
 const UserModel = require("./User")(sequelize, Sequelize);
+const MainModel = require("./Post")(sequelize, Sequelize);
 
 db.User = require("./User")(sequelize, Sequelize);
+db.Post = require("./Post")(sequelize, Sequelize);
 
 db.User = UserModel;
+db.Post = MainModel;
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
