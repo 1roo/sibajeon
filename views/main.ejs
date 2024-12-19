@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Main</title>
+    <link rel="stylesheet" href="/static/css/global.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <img
+          class="right-arrow"
+          src="/static/images/right-arrow.png"
+          alt="right-arrow"
+        />
+        <img
+          class="header-logo"
+          onclick="location.href='/'"
+          src="/static/images/logo.png"
+          alt="logo"
+        />
+        <img
+          class="hamburger-bar"
+          src="/static/images/hamburger.png"
+          alt="hamburger-bar"
+        />
+      </header>
+      <div class="search-bar">
+        <input
+          type="text"
+          class="search-input"
+          placeholder="강원도 고성 봉포해수욕장"
+        />
+        <div class="search-btn" onclick="searchByKeyword()">
+          <i class="bi bi-search"></i>검색
+        </div>
+      </div>
+      <div class="weather-bar">서울특별시 강남구</div>
+      <div class="best-posts">
+        <p>BEST 인기글</p>
+      </div>
+      <div class="regional-posts">
+        <p>지역별 바다</p>
+      </div>
+    </div>
+  </body>
+</html>
