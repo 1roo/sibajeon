@@ -8,3 +8,8 @@ const SALT = 10;
 exports.main = (req, res) => {
   res.render("index");
 };
+
+/* '/signup' GET */
+exports.signup = (req, res) => {
+  res.render("signup");
+};
